@@ -87,13 +87,17 @@ button {
   gap: 8px;
 }
 
-.nav span {
+.nav button {
+  border: 0;
+  background: transparent;
+  text-align: left;
   padding: 11px 12px;
   border-radius: 8px;
   color: #cbd5e1;
   font-size: 14px;
 }
 
+.nav button:hover,
 .nav .active {
   background: rgba(255, 255, 255, 0.09);
   color: #fff;
@@ -182,6 +186,21 @@ button {
   gap: 8px;
 }
 
+.quick-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.quick-actions button {
+  border: 1px solid var(--line);
+  background: #fff;
+  color: #334155;
+  padding: 7px 9px;
+  font-size: 12px;
+}
+
 input,
 textarea {
   width: 100%;
@@ -231,6 +250,14 @@ button:disabled {
   cursor: not-allowed;
 }
 
+button:hover:not(:disabled) {
+  transform: translateY(-1px);
+}
+
+button {
+  transition: transform 0.12s ease, border-color 0.12s ease, background 0.12s ease;
+}
+
 .metrics {
   display: grid;
   grid-template-columns: repeat(5, minmax(110px, 1fr));
@@ -253,6 +280,36 @@ button:disabled {
   display: block;
   margin-top: 8px;
   font-size: 28px;
+}
+
+.process-strip {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(90px, 1fr));
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.process-strip span {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--muted);
+  padding: 9px 10px;
+  font-size: 12px;
+  font-weight: 800;
+  text-align: center;
+}
+
+.process-strip span.done {
+  background: var(--green-soft);
+  border-color: #9fe8b5;
+  color: var(--green);
+}
+
+.process-strip span.active {
+  background: var(--blue-soft);
+  border-color: #a8c9ff;
+  color: var(--blue);
 }
 
 .status {
@@ -282,6 +339,29 @@ button:disabled {
 .status.active {
   background: var(--blue-soft);
   border-color: #a8c9ff;
+}
+
+.empty-state {
+  margin: 14px;
+  border: 1px dashed #cbd5e1;
+  border-radius: 8px;
+  padding: 18px;
+  min-height: 150px;
+  display: grid;
+  gap: 8px;
+  align-content: center;
+  justify-items: start;
+  color: var(--muted);
+  background: #fbfcfd;
+}
+
+.empty-state strong {
+  color: var(--ink);
+  font-size: 17px;
+}
+
+.empty-state span {
+  line-height: 1.5;
 }
 
 .panel {
@@ -577,6 +657,7 @@ pre {
   }
 
   .metrics,
+  .process-strip,
   .form-grid,
   .detail-grid {
     grid-template-columns: 1fr;
