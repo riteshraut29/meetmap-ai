@@ -66,3 +66,13 @@ Demo event URL:
 ```text
 https://luma.com/d4srtk7l?tk=kLvzJe
 ```
+
+## Live Deployment
+
+Current live demo:
+
+```text
+https://meetmap-ai.vercel.app
+```
+
+The Vercel deployment uses `vercel.json` plus serverless API functions in `api/`. Add `OPENAI_API_KEY` in the Vercel project environment variables, then redeploy, to enable real AI responses in production.
