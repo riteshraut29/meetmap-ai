@@ -64,10 +64,9 @@ button {
   width: 40px;
   height: 40px;
   border-radius: 8px;
-  display: grid;
-  place-items: center;
-  background: var(--teal);
-  font-weight: 900;
+  display: block;
+  background: #111820;
+  object-fit: cover;
 }
 
 .brand h1 {

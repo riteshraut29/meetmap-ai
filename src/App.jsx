@@ -304,7 +304,7 @@ function App() {
     <div className="app-shell">
       <aside className="sidebar">
         <div className="brand">
-          <div className="brand-mark">M</div>
+          <img className="brand-mark" src="/meetmap-logo.svg" alt="MeetMap AI logo" />
           <div>
             <h1>MeetMap AI</h1>
             <p>Opportunity pipeline</p>
